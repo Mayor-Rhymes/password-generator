@@ -1,0 +1,168 @@
+:root{
+
+
+    --background: #24232B
+}
+
+
+*{
+
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow';
+}
+
+body{
+
+
+    background-color: black;
+}
+
+
+
+.wrapper{
+
+
+    margin-top: 70px;
+    width: max(30rem, 300px);
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    justify-content: center;
+    padding-inline: 1.5rem;
+    padding-block: 1.4rem;
+    
+}
+
+.password-wrapper{
+
+
+    color: white;
+    width: 100%;
+    background-color: var(--background);
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    align-items: center;
+    padding-inline: 1.2rem;
+}
+
+p:first-child{
+
+
+    text-align: center;
+    color: white
+
+
+}
+
+
+.password-generator-section{
+
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    background-color: var(--background);
+    padding-block: calc(100%/10);
+    padding-inline: 1.3rem;
+}
+
+.row-section{
+
+
+
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.slider{
+
+    -webkit-appearance: none;
+    background-color: black;
+    height: 3px;
+
+
+
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 20px; /* Set a specific slider handle width */
+    height: 20px; /* Slider handle height */
+    background: white; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50%;
+  }
+
+
+input[type="checkbox"]{
+
+
+    background-color: green;
+    font-size: 30px;
+}
+
+
+.check-section{
+
+    color: white;
+    display: flex;
+    gap: 1.5rem;
+    
+}
+
+
+.strength-section{
+
+
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 1.2rem;
+    gap: 10px;
+    background-color: #18171F;
+    height: 40px;
+    align-items: center;
+
+}
+
+.level-box{
+
+    height: 20px;
+    width: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: white;
+    
+    
+}
+
+
+
+button{
+
+
+    background-color: lightgreen;
+    color: black;
+    height: 2.5rem;
+    transition: all 400ms ease-in-out 250ms;
+    border-width: 1px;
+    outline: none;
+}
+
+button:hover{
+
+    background-color: var(--background);
+    color: lightgreen;
+    border-color: lightgreen;
+    outline: none;
+    
+    
+
+}
