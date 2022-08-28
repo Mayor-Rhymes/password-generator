@@ -25,6 +25,11 @@ const level2 = document.querySelectorAll(".level-box")[1];
 const level3 = document.querySelectorAll(".level-box")[2];
 const level4 = document.querySelectorAll(".level-box")[3];
 const levelParagraph = document.querySelector(".level-paragraph");
+const toast = document.querySelector('.toast')
+
+
+uppercasebox.checked = true;
+lowercasebox.checked = true;
 
 
 
@@ -49,7 +54,7 @@ slider.oninput = function(){
         level4.style.backgroundColor = "inherit";
         level4.style.borderColor = "white";
         
-     }  else if (passwordSize >= 10 && passwordSize < 15 && uppercasebox.checked && lowercasebox.checked && numberbox.checked && symbolbox.checked){
+     }  else if (passwordSize >= 10 && passwordSize < 15){
         
         levelParagraph.style.color = "lightyellow";
         levelParagraph.textContent = "MEDIUM";
@@ -63,7 +68,7 @@ slider.oninput = function(){
         level4.style.backgroundColor = "inherit";
         level4.style.borderColor = "white";
 
-     } else if(passwordSize >= 15 && uppercasebox.checked && lowercasebox.checked && numberbox.checked && symbolbox.checked){
+     } else if(passwordSize >= 15){
         
         levelParagraph.style.color = "green";
         levelParagraph.textContent = "STRONG";
@@ -93,6 +98,19 @@ copyButton.addEventListener('click', async () => {
 
 
     await navigator.clipboard.writeText(passwordHolder.textContent)
+    
+
+    toast.style.display = "block";
+
+    setTimeout(() => {
+
+        
+        toast.style.display = "none"
+    }, 1000)
+    
+    
+    
+    
 
     
 })
